@@ -1,20 +1,20 @@
 import { useState } from 'react'
-import {createBrowserRouter,  createRoutesFromElements,
+import {createBrowserRouter,
   Route, RouterProvider,} from 'react-router-dom'
 import './App.css'
 import Home from './components/Home/Home/Home'
+import Appointment from './components/Appointment/Appointment/Appointment'
 
-const router= createBrowserRouter(
-  createRoutesFromElements(
-     <Route path='/'element={<Home></Home>}>
-    <Route path='/' element={<Home></Home>}></Route>
-
-
-
-     </Route>
-  )
-)
-
+const router= createBrowserRouter([
+  {
+    path:"/",
+    element: <Home></Home>,
+  },
+  {
+    path:'/appointment',
+    element: <Appointment></Appointment>
+  }
+])
 
 function App() {
   
